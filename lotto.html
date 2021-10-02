@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict';
+        function lottomake(){
+            let arr1 = [];
+            let i = 0;
+            let checkb = true;
+
+            while(arr1.length < 6){
+                const num1 = Math.random();
+                console.log(`${num1}`)
+                let num2 = Math.floor(num1 * 45) + 1;
+                checkb = true;
+                console.log(`${num2}`)
+
+                if(i==0){
+                    arr1[i] = num2;
+                    i= i + 1;
+                    console.log(`${arr1}`);
+                } 
+                else{
+                    for(let j = 0; j<=arr1.length -1; j++){
+                    if(num2 == arr1[j]){
+                        checkb = false;
+                            }
+                        }
+                    if(checkb){
+                    arr1[i] = num2;
+                console.log(`${arr1}`)
+                i= i + 1;
+                    } 
+                }
+            }    
+            arr1.sort();
+            console.log(`로또 번호 : ${arr1}`)         
+                        }
+                
+    </script>
+</head>
+
+<body>
+    <h2>로또</h2>
+    <input type="button" value="클릭" onclick="lottomake()">
+
+</body>
+</html>

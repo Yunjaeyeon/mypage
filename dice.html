@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+        'use strict';
+        function checknb(){
+            const num1 = Math.random();
+            let num2 = Math.floor(num1 * 6 ) + 1;
+            console.log(`${num2}`);
+            let frm = document.myform;
+            let num3 = frm.inputnb.value;
+            console.log(`${num3}`);
+
+            if(num2 == num3){
+                console.log(`입력한 값이 같습니다.`)
+            }
+            else{
+                console.log(`입력한 값이 다릅니다.`)
+                
+            }
+        }
+    </script>
+<body>
+    <form name="myform">
+        <h2>주사위</h2>
+        <label for="number">입력한 값 : <input type="text" name = "inputnb" value="1"></label>
+        <p><input type="button" value="클릭" onclick="checknb()"></p>
+    </form>
+
+</body>
+</html>
